@@ -1,0 +1,7 @@
+com\example\indexer\Indexer.class
+com\example\indexer\SimpleWordSplitter.class
+com\example\indexer\WordSplitter.class
+com\example\indexer\FileIndex.class
+com\example\indexer\IndexerImpl.class
+com\example\indexer\IndexerCLI.class
+com\example\indexer\IndexUpdater.class

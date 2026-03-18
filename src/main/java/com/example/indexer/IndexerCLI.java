@@ -24,28 +24,28 @@ public class IndexerCLI {
                     case "add":
                         Path addPath = Paths.get(argument);
                         indexer.addPath(addPath);
-                        System.out.println("Добавлено: " + addPath);
+                        System.out.println("added: " + addPath);
                         break;
                     case "remove":
                         Path removePath = Paths.get(argument);
                         indexer.removePath(removePath);
-                        System.out.println("Удалено: " + removePath);
+                        System.out.println("removed: " + removePath);
                         break;
                     case "search":
                         Set<Path> result = indexer.search(argument);
                         if (result.isEmpty()) {
-                            System.out.println("Не найдено.");
+                            System.out.println("not found.");
                         } else {
-                            System.out.println("Найдено в:");
+                            System.out.println("found in:");
                             result.forEach(p -> System.out.println("  " + p));
                         }
                         break;
                     case "exit":
                         indexer.close();
-                        System.out.println("Выход.");
+                        System.out.println("exit.");
                         return;
                     default:
-                        System.out.println("Неизвестная команда. Доступные: add, remove, search, exit");
+                        System.out.println("Unknown command. Available: add, remove, search, exit");
                 }
             } catch (Exception e) {
                 System.err.println("Ошибка: " + e.getMessage());
